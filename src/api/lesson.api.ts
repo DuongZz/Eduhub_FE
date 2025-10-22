@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://localhost:5000/v1/lesson',
+    baseURL: `${process.env.NEXT_PUBLIC_API_BASE}/v1/lesson`,
     withCredentials: true,
 });
 
