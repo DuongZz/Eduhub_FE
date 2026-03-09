@@ -48,7 +48,9 @@ export default function LoginPage() {
   };
 
   const handleOAuth2 = async (type: string) => {
-    window.location.href = `https://eduhub-fe-eight.vercel.app/auth/${type}`;
+    const backendBase = process.env.NEXT_PUBLIC_API_BASE;
+    // OAuth endpoints live on the backend (not under /v1)
+    window.location.href = `${backendBase}/auth/${type}`;
   };
 
   return (
